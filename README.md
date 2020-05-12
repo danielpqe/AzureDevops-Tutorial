@@ -1,17 +1,18 @@
-# AzureDevops-Tutorial
-A complete tutorial for implement Azure Devops on any project
+# AzureDevops-Workflow
+A complete tutorial for implement Azure Devops in any project
 
-# Azure DevOps Doc
-## Step By step
+## 1. Summary
+## 2. Basics
+   - Git
+   - Azure DevOps
+     - Boards, Repos, Pipelines, Test Plans
+## 3. Workflow
 
-1. Local code (Push)
-2. Azure Repository
-3. Build
-4. Release
-5. Deploy
-   1. Development
-   2. Production
+![workflow](workflow.jpg)
+## 4. Policies
+   - Managing  branches (ramas por requerimiento,etc)
+   - Pull requests policies (borrar una rama automaticamente una vez creada, etc)
+    
+## 5. Feedback
 
-## Business Rules
-ramas por requerimiento
--borrar una rama automaticamente una vez creada
+
