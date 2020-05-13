@@ -7,7 +7,7 @@ A complete tutorial for implement Azure Devops in any project
    - Azure DevOps
      - Boards, Repos, Pipelines, Test Plans
 ## 3. Workflow
-
+General Workflow
 ![workflow](workflow.jpg)
 ## 4. Policies
    - Managing  branches (branches by requirement,etc)
