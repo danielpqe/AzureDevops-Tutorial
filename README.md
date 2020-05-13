@@ -10,8 +10,8 @@ A complete tutorial for implement Azure Devops in any project
 
 ![workflow](workflow.jpg)
 ## 4. Policies
-   - Managing  branches (ramas por requerimiento,etc)
-   - Pull requests policies (borrar una rama automaticamente una vez creada, etc)
+   - Managing  branches (branches by requirement,etc)
+   - Pull requests policies (delete automatically a branch once its created, etc)
     
 ## 5. Feedback
 
