@@ -13,6 +13,6 @@ A complete tutorial for implement Azure Devops in any project
    - Managing  branches (branches by requirement,etc)
    - Pull requests policies (delete automatically a branch once its created, etc)
     
-## 5. Feedback
+## 5. Test
 
 
