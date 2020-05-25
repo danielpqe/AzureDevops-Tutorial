@@ -27,7 +27,7 @@ This document involve aspects of two technologies (Azure Devops and Git) to prov
   <div style="text-align:center"><img src="img/connect_vs.png" title="Connect" width="250" ></div>
 - Then will see the home dasboard for visual studio, in the left side is the Solution Explorer where We can find all files related to work, in the right side is the Team Explorer where We can be sync with the Azure Repository, by default when a repository is cloned it will be in the "master" branch as We can see in the right-bottom in the image below.
   
-<div style="text-align:center"><img src="img/vs.png" title="Home VS" width="600" ></div>
+   <div style="text-align:center"><img src="img/vs.png" title="Home VS" width="600" ></div>
 
 1. Update local master branch (Pull)
 
@@ -51,11 +51,11 @@ This document involve aspects of two technologies (Azure Devops and Git) to prov
 
    To create a new local branch click in New Branch, write a descriptive name for the branch ("hotFixChangeSomething" in the image), it will be created from the master local branch, it means it will be an independent copy, then click in Create Branch
 
-   <div style="text-align:center"><img src="img/newBranch.png" title="Branches" width="250" ></div>
+   <div style="text-align:center"><img src="img/newBranch.png" title="New Branch" width="250" ></div>
 
    The next image shows the new branch created, by default when a branch is created it will be active, to identity and change the current active branch in the local repository go to the right-bottom corner in the visual studio window, the process to change between branches is called "checkout" and to do a checkout first is needed save and confirm (commit) all changes, if some changes are not commited it will be moved when you make a checkout
 
-   <div style="text-align:center"><img src="img/newBranchCreated.png" title="Branches" width="250" ></div>
+   <div style="text-align:center"><img src="img/newBranchCreated.png" title="Branch created" width="250" ></div>
 
 3. Save changes in the local repository (Commit)
 
@@ -92,7 +92,7 @@ This document involve aspects of two technologies (Azure Devops and Git) to prov
 
    To make a Pull Request go back in the Team Explorer and click in "Pull Request"
 
-   <div style="text-align:center"><img src="img/pullRequest.png" title="Branches" width="250" ></div>
+   <div style="text-align:center"><img src="img/pullRequest.png" title="Making a pull request" width="250" ></div>
 
    Then click in New Pull Request, this will redirection to the Azure DevOps site on the Pull Request section, there there are some field to fill in:
 
@@ -104,7 +104,7 @@ This document involve aspects of two technologies (Azure Devops and Git) to prov
 
    Click in Create
 
-   <div style="text-align:center"><img src="img/pullRequestAzureDevops.png" title="Branches" width="500" ></div>
+   <div style="text-align:center"><img src="img/pullRequestAzureDevops.png" title="Create a pull request" width="500" ></div>
 
    After that, details of the sent pull request will be showed
 
@@ -114,13 +114,13 @@ This document involve aspects of two technologies (Azure Devops and Git) to prov
 - Discussion section if it is necessary other details before approve the pull request
 - Approve Button: Admin is the only one person who is able to approve the PR, approve it by yourself is optional
 - Complete PR: Define if once the PR is approved by the admin it should merge to production (Set auto-complete by default)
-   <div style="text-align:center"><img src="img/pullRequestSent.png" title="Branches" width="500" ></div>
+   <div style="text-align:center"><img src="img/pullRequestSent.png" title="Detail from pull request" width="500" ></div>
 
-   <div style="text-align:center"><img src="img/setAutoComplete.png" title="Branches" width="500" ></div>
+   <div style="text-align:center"><img src="img/setAutoComplete.png" title="Set auto-complete" width="500" ></div>
 
    Once the admin was reviewed the changes and there are not merging conflicts these changes will be part of the master branch (Production environment)
 
-   <div style="text-align:center"><img src="img/prApproved.png" title="Branches" width="500" ></div>
+   <div style="text-align:center"><img src="img/prApproved.png" title="Pull request approved" width="500" ></div>
 
 
    Now the work for the task assigned is at least in three sites: in the local branch as "hotFixChangeSomething", in the remote branch as "hotFixChangeSomething" and in the master branch as a commit.
