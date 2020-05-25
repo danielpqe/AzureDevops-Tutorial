@@ -1,13 +1,16 @@
-# AzureDevops-Workflow
-A complete tutorial for implement Azure Devops in any project
+# Azure Devops - Work flow
+
 
 ## 1. Summary
 
+This document involve aspects of two technologies (Azure Devops and Git) to provide assitance in the manage of projects since manage requeriments and tasks until deployment and producction.
+
 ## 2. Basics
-   - Git
-   - Azure DevOps
-     - Boards, Repos, Pipelines, Test Plans
-## 3. Workflow
+- Azure DevOps
+   - Boards, Repos, Pipelines, Test Plans
+- Git
+   
+## 3. Work flow
 ### General Workflow
 ![workflow](img/workflow.jpg "Workflow")
 
@@ -80,23 +83,62 @@ The image below shows a successful push, it means that a remote branch named "ho
 
 5. Send a request to admin to merge your changes into production (Pull Request)
 
-By business policies it is not posible push the changes directly to the remote master branch, the it is necesary to send a request to the admin, the admin will decide based in your work done if the request is approved or rejected, this proces is called Pull Request.
+By business policies it is not posible push the changes directly to the remote master branch, it is necesary to send a request to the admin, the admin will decide based in your work done if the request is approved or rejected, this process is called Pull Request.
 
 To make a Pull Request go back in the Team Explorer and click in "Pull Request"
 <div style="text-align:center"><img src="img/pullRequest.png" title="Branches" width="250" ></div>
 
+Then click in New Pull Request, this will redirection to the Azure DevOps site on the Pull Request section, there there are some field to fill in:
+
+- Title: By default is the commit name, it can change as nedeed
+- Description: By default is the commit name, as a good practice write some relevant description to let the admin know which changes were done
+- Reviewers: The person who approved or reject the pull request, It appears empty by default but already exists at least an admin, the most of cases it should be left empty
+- Work item to link: The task in Azure DevOps which is related
+- Tags:  Some key words to describe what involves the commit
+
+Click in Create
+
+<div style="text-align:center"><img src="img/pullRequestAzureDevops.png" title="Branches" width="500" ></div>
+
+After that, details of the sent pull request will be showed
+
+-  Commit's title, from what branch it comes from and destination (the most of cases master branch)
+- Name of the reviewer (The admin configured by default)
+- Commit's description
+- Discussion section if it is necessary other details before approve the pull request
+- Approve Button: Admin is the only one person who is able to approve the PR, approve it by yourself is optional
+- Complete PR: Define if once the PR is approved by the admin it should merge to production (Set auto-complete by default)
+<div style="text-align:center"><img src="img/pullRequestSent.png" title="Branches" width="500" ></div>
+
+  
+<div style="text-align:center"><img src="img/setAutoComplete.png" title="Branches" width="500" ></div>
+
+Once the admin was reviewed the changes and there are not merging conflicts these changes will be part of the master branch (Production environment)
+
+<div style="text-align:center"><img src="img/prApproved.png" title="Branches" width="500" ></div>
 
 
+Now the work for the task assigned is at least in three sites: in the local branch as "hotFixChangeSomething", in the remote branch as "hotFixChangeSomething" and in the master branch as a commit.
 
-1. Resolve conflicts
+It is time to prepare the local repository for the nexts tasks and it is nedeed to update the master branch with the last changes, to do that there are two ways:
 
+- Update from remote repository (step1-Recommended), to keep updated any local branch from their related remote branch go to Branches section in the team explorer and double click in the branch you want to be placed (master in this case), then back to sync section in the team explorer:
+  
+  - Fetch: To show commits (changes) done in remote branch
+  - Pull: To merge these commits to the current local branch
 
+- In you local repository there are the master branch and the hotFixChageSomething branch, the second one has changes that has not the first one, to update the master branch go to Branches section in the team explorer and double click in master to place there, then go to merge button, here you need to add the Merge from branch
 
-## 4. Policies
+<div style="text-align:center"><img src="img/merge.png" title="Merge" width="300" ></div>
+
+Then click in Merge, now the master local branch is updated with the last changes from other branch, do the same exercise to merge from any local branch.
+<div style="text-align:center"><img src="img/merged.png" title="Merged" width="300" ></div>
+
+## 4. Policies and good practices
    - Managing  branches (branches by requirement,etc)
    - Pull requests policies (delete automatically a branch once its created, etc)
     
-## 5. Feedback
+
 
 
 
